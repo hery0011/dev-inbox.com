@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+  <title>Comptabilité - Vente</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+   <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <i class="fa fa-qrcode"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Devinbox</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Tableau de bord</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        CAISSE
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_caisse.html">
+          <i class="fas fa-fw fa-wallet"></i>
+          <span>Gestion de la caisse</span></a>
+      </li>
+
+     <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_caisse_creer.html">
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Ajouter une opération</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        RECETTE
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item active">
+        <a class="nav-link" href="comptabilite_vente.html">
+          <i class="fas fa-fw fa-store-alt"></i>
+          <span>Gestion des ventes</span></a>
+      </li>
+
+     <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_vente_facturation.html">
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Facturation</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        CHARGE
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_charge.html">
+          <i class="fas fa-fw fa-minus-circle"></i>
+          <span>Gestion des charges</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_charge_creer.html">
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Ajouter une charge</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        INVENTAIRE
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="inventaire_stock.html">
+          <i class="fas fa-fw fa-list"></i>
+          <span>Stock</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="inventaire_referentiel.html">
+          <i class="fas fa-fw fa-list-alt"></i>
+          <span>Référentiel</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="inventaire_stock_creer.html">
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Ajouter un article</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        BANQUE
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_banque.html">
+          <i class="fas fa-fw fa-money-bill"></i>
+          <span>Mouvements bancaires</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="comptabilite_banque_creer.html">
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Ajouter une opération</span></a>
+      </li>
+      
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+
+    </ul>
+
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-calendar"></i>
+              </a>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fw fa-cog"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hello world !</span>
+                <i class="fa fa-user"></i>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Ventes</h1>
+          <p class="mb-4">Vous trouverez dans cette page la liste des ventes.</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Liste des Ventes</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>N° Opération</th>
+                      <th>N° Facture</th>
+                      <th>Nom du client</th>
+                      <th>Contact</th>
+                      <th>Adresse</th>
+                      <th>Date</th>
+                      <th>Libellé</th>
+                      <th>Code Article</th>
+                      <th>Quantité</th>
+                      <th>Unité</th>
+                      <th>PU</th>
+                      <th>Montant Brut</th>
+                      <th>Montant Net</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>N° Opération</th>
+                      <th>N° Facture</th>
+                      <th>Nom du client</th>
+                      <th>Contact</th>
+                      <th>Adresse</th>
+                      <th>Date</th>
+                      <th>Libellé</th>
+                      <th>Code Article</th>
+                      <th>Quantité</th>
+                      <th>Unité</th>
+                      <th>PU</th>
+                      <th>Montant Brut</th>
+                      <th>Montant Net</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>001 (Automatique)</td>
+                      <td>F-001 (Automatique)</td>
+                      <td>RAKOTO</td>
+                      <td>032 85 018 18</td>
+                      <td>Lot 123 B</td>
+                      <td>01/01/2020 (Manuel)</td>
+                      <td>Achat MP (Manuel)</td>
+                      <td>Art 001 / 005</td>
+                      <td>20 (Manuel)</td>
+                      <td>kg (Manuel)</td>
+                      <td>1.200 (Manuel)</td>
+                      <td>24.000 (= Q*PU)</td>
+                      <td>28.800 [= Q*PU + Q*PU*0.2 ]</td>
+                    </tr>
+                    <tr>
+                      <td>002 (Automatique)</td>
+                      <td>F-002 (Automatique)</td>
+                      <td>RANDRIA</td>
+                      <td>033 85 018 18</td>
+                      <td>Lot 123 C</td>
+                      <td>02/01/2020 (Manuel)</td>
+                      <td>Achat MP (Manuel)</td>
+                      <td>Art 001 / 006</td>
+                      <td>30 (Manuel)</td>
+                      <td>kg (Manuel)</td>
+                      <td>1.000 (Manuel)</td>
+                      <td>30.000 (= Q*PU)</td>
+                      <td>36.000 [= Q*PU + Q*PU*0.2 ]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <a href="comptabilite_vente_facturation.html" class="btn btn-success btn-icon-split">
+            <span class="icon text-white-50">
+            <i class="fas fa-plus-circle"></i>
+            </span>
+            <span class="text">Ajouter une vente</span>
+          </a>
+          <a href="#" class="btn btn-danger btn-icon-split">
+            <span class="icon text-white-50">
+               <i class="fas fa-trash"></i>
+             </span>
+            <span class="text">Supprimer une opération</span>
+          </a>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+              <footer id="footer" role="contentinfo">
+                <a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+                  <P>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <br>| Made with passion by <a href="" target="_blank">www.devinbox.com</a></P>
+              </footer>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>

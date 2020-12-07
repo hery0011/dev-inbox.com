@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facturation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/facturation.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    
+</head>
+<body>
+
+<div class="container" style="max-width: 1370px;">
+  <div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h2>FACTURE N°</h2>
+                <input type="" name="" disabled="" placeholder="(Automatique)">
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">A l'ordre de : </div>
+                        <div class="panel-body">
+                            <input type="text" name="" placeholder="(Nom du client)"><br>
+                            <input type="number" name="" placeholder="(Contact)"><br>
+                            <input type="" name="" placeholder="(Adresse du client)"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Information sur le payement :</div>
+                        <div class="panel-body">
+                            <strong>Type :</strong> 
+                            <select name="pets" id="pet-select">
+                                <option value="">Espèce</option>
+                                <option value="">Virement bancaire</option>
+                                <option value="">Chèque</option>
+                                <option value="hamster">Autres</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Date :</div>
+                        <div class="panel-body">
+                          <strong>Du :</strong>
+                          <input id="idate" type="date" name="" placeholder="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-right">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Entreprise ALPHA</div>
+                        <div class="panel-body">
+                            <strong>Référence fiscale :</strong><br>
+                            NIF : 123 456 789<br>
+                            STAT : 456 321 987 <br>
+                            RCS X 2020 Madagascar<br>
+                            Antananarivo 101<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center"><strong>Summary</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <td><strong>Libellé</strong></td>
+                                    <td class="text-center"><strong>Code Article</strong></td>
+                                    <td class="text-center"><strong>Qté</strong></td>
+                                    <td class="text-center"><strong>Unité</strong></td>
+                                    <td class="text-center"><strong>PU</strong></td>
+                                    <td class="text-center"><strong>Total</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-right"><input type="" name="" disabled placeholder="Automatique"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-center"><input type="" name=""></td>
+                                    <td class="text-right"><input type="" name="" disabled placeholder="Automatique"></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn btn-info">Ajouter</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow text-center"><strong>Sous total</strong></td>
+                                    <td class="highrow text-right"><input type="" name="" disabled placeholder="Automatique"></td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow text-center"><strong>TVA</strong></td>
+                                    <td class="emptyrow text-right"><input type="" name="" disabled placeholder="20%"></td>
+                                </tr>
+                                <tr>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow text-center"><strong>Total</strong></td>
+                                    <td class="highrow text-right"><input type="" name="" disabled placeholder=" Sous total * TVA"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Le client, </div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-right">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Entreprise ALPHA</div>
+                        <div class="panel-body">
+                            <strong>Référence fiscale :</strong><br>
+                            NIF : 123 456 789<br>
+                            STAT : 456 321 987 <br>
+                            RCS X 2020 Madagascar<br>
+                            Antananarivo 101<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <button class="btn btn-success" type="submit">Soumettre</button>
+         <button class="btn btn-danger" type="submit"><a href="comptabilite_vente.html" style="text-decoration: none; color: white;"> Annuler</a></button>
+        <button class="btn btn-primary">Generate PDF</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
